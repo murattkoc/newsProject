@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>UPGRADE-2.4.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+UPGRADE-2.4.md</font>
+</center></td></tr></table>
+<pre><span class="s0">UPGRADE FROM 2.3 to 2.4</span>
+<span class="s2">=======================</span>
+
+<span class="s0">When upgrading Symfony from 2.3 to 2.4, you need to do the following changes</span>
+<span class="s0">to the code that came from the Standard Edition</span><span class="s1">:</span>
+
+ <span class="s2">* </span><span class="s0">We recommend to comment or remove the </span><span class="s3">`</span><span class="s0">firephp</span><span class="s3">` </span><span class="s0">and </span><span class="s3">`</span><span class="s0">chromephp</span><span class="s3">` </span><span class="s0">Monolog</span>
+   <span class="s0">handlers as they might cause issues with some configuration </span><span class="s1">(</span><span class="s3">`</span><span class="s0">chromephp</span><span class="s3">`</span>
+   <span class="s0">with Nginx for instance</span><span class="s1">)</span><span class="s0">.</span>
+</pre>
+</body>
+</html>

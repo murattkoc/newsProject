@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>UPGRADE-2.3.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+UPGRADE-2.3.md</font>
+</center></td></tr></table>
+<pre><span class="s0">UPGRADE FROM 2.2 to 2.3</span>
+<span class="s2">=======================</span>
+
+<span class="s0">When upgrading Symfony from 2.2 to 2.3, you need to do the following changes</span>
+<span class="s0">to the code that came from the Standard Edition</span><span class="s1">:</span>
+
+ <span class="s2">* </span><span class="s0">The debugging tools are not enabled by default anymore and should be added</span>
+   <span class="s0">to the</span>
+   <span class="s1">[</span><span class="s3">`</span><span class="s0">web/app_dev.php</span><span class="s3">`</span><span class="s1">](https://github.com/symfony/symfony-standard/blob/2.3/web/app_dev.php)</span>
+   <span class="s0">front controller manually, just after including the bootstrap cache</span><span class="s1">:</span>
+
+        <span class="s3">use Symfony\Component\Debug\Debug;</span>
+
+        <span class="s3">Debug::enable();</span>
+
+   <span class="s0">You also need to enable debugging in the</span>
+   <span class="s1">[</span><span class="s3">`</span><span class="s0">app/console</span><span class="s3">`</span><span class="s1">](https://github.com/symfony/symfony-standard/blob/2.3/app/console)</span>
+   <span class="s0">script, after the </span><span class="s3">`</span><span class="s0">$debug</span><span class="s3">` </span><span class="s0">variable is defined</span><span class="s1">:</span>
+
+        <span class="s3">use Symfony\Component\Debug\Debug;</span>
+
+        <span class="s3">if ($debug) {</span>
+            <span class="s3">Debug::enable();</span>
+        <span class="s3">}</span>
+
+ <span class="s2">* </span><span class="s0">The </span><span class="s3">`</span><span class="s0">parameters.yml</span><span class="s3">` </span><span class="s0">file can now be managed by the</span>
+   <span class="s3">`</span><span class="s0">incenteev/composer-parameter-handler</span><span class="s3">` </span><span class="s0">bundle that comes with the 2.3</span>
+   <span class="s0">Standard Edition</span><span class="s1">:</span>
+
+    <span class="s2">* </span><span class="s0">add </span><span class="s3">`</span><span class="s1">&quot;</span><span class="s0">incenteev/composer-parameter-handler</span><span class="s1">&quot;: &quot;~</span><span class="s0">2.0</span><span class="s1">&quot;</span><span class="s3">` </span><span class="s0">to your</span>
+      <span class="s3">`</span><span class="s0">composer.json</span><span class="s3">` </span><span class="s0">file;</span>
+
+    <span class="s2">* </span><span class="s0">add </span><span class="s3">`</span><span class="s0">/app/config/parameters.yml</span><span class="s3">` </span><span class="s0">to your </span><span class="s3">`</span><span class="s0">.gitignore</span><span class="s3">` </span><span class="s0">file;</span>
+
+    <span class="s2">* </span><span class="s0">create a</span>
+      <span class="s1">[</span><span class="s3">`</span><span class="s0">app/config/parameters.yml.dist</span><span class="s3">`</span><span class="s1">](https://github.com/symfony/symfony-standard/blob/2.3/app/config/parameters.yml.dist)</span>
+      <span class="s0">file with sensible values for all your parameters.</span>
+
+ <span class="s2">* </span><span class="s0">It is highly recommended that you switch the minimum stability to </span><span class="s3">`</span><span class="s0">stable</span><span class="s3">`</span>
+   <span class="s0">in your </span><span class="s3">`</span><span class="s0">composer.json</span><span class="s3">` </span><span class="s0">file.</span>
+
+ <span class="s2">* </span><span class="s0">If you are using Apache, have a look at the new</span>
+   <span class="s1">[</span><span class="s3">`</span><span class="s0">.htaccess</span><span class="s3">`</span><span class="s1">](https://github.com/symfony/symfony-standard/blob/2.3/web/.htaccess)</span>
+   <span class="s0">configuration and change yours accordingly.</span>
+
+ <span class="s2">* </span><span class="s0">In the</span>
+   <span class="s1">[</span><span class="s3">`</span><span class="s0">app/autoload.php</span><span class="s3">`</span><span class="s1">](https://github.com/symfony/symfony-standard/blob/2.3/app/autoload.php)</span>
+   <span class="s0">file, the section about </span><span class="s3">`</span><span class="s0">intl</span><span class="s3">` </span><span class="s0">should be removed as it is not needed anymore.</span>
+
+<span class="s0">You can also have a look at the</span>
+<span class="s1">[</span><span class="s0">diff</span><span class="s1">](https://github.com/symfony/symfony-standard/compare/v2.2.0%E2%80%A62.3)</span>
+<span class="s0">between the 2.2 version of the Standard Edition and the 2.3 version.</span>
+</pre>
+</body>
+</html>

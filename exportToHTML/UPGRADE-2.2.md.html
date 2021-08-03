@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>UPGRADE-2.2.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+UPGRADE-2.2.md</font>
+</center></td></tr></table>
+<pre><span class="s0">UPGRADE FROM 2.1 to 2.2</span>
+<span class="s2">=======================</span>
+
+ <span class="s2">* </span><span class="s0">The </span><span class="s1">[</span><span class="s3">`</span><span class="s0">web/.htaccess</span><span class="s3">`</span><span class="s1">](https://github.com/symfony/symfony-standard/blob/2.2/web/.htaccess)</span>
+   <span class="s0">file has been enhanced substantially to prevent duplicate content with and</span>
+   <span class="s0">without </span><span class="s3">`</span><span class="s0">/app.php</span><span class="s3">` </span><span class="s0">in the URI. It also improves functionality when using</span>
+   <span class="s0">Apache aliases or when mod_rewrite is not available. So you might want to</span>
+   <span class="s0">update your </span><span class="s3">`</span><span class="s0">.htaccess</span><span class="s3">` </span><span class="s0">file as well.</span>
+
+ <span class="s2">* </span><span class="s0">The </span><span class="s3">``</span><span class="s1">_</span><span class="s0">internal</span><span class="s3">`` </span><span class="s0">route is not used any more. It should then be removed</span>
+   <span class="s0">from both your routing and security configurations. A </span><span class="s3">``</span><span class="s0">fragments</span><span class="s3">`` </span><span class="s0">key has</span>
+   <span class="s0">been added to the framework configuration and must be specified when ESI or</span>
+   <span class="s0">Hinclude are in use. No security configuration is required for this path as</span>
+   <span class="s0">by default ESI access is only permitted for trusted hosts and Hinclude</span>
+   <span class="s0">access uses an URL signing mechanism.</span>
+
+   <span class="s3">```</span>
+   <span class="s3">framework:</span>
+       <span class="s3"># ...</span>
+       <span class="s3">fragments: { path: /_proxy }</span>
+   <span class="s3">```</span>
+
+<span class="s0">Functional Tests</span>
+<span class="s2">----------------</span>
+
+ <span class="s2">* </span><span class="s0">The profiler has been disabled by default in the test environment. You can</span>
+   <span class="s0">enable it again by modifying the </span><span class="s3">``</span><span class="s0">config_test.yml</span><span class="s3">`` </span><span class="s0">configuration file or</span>
+   <span class="s0">even better, you can just enable it for the very next request by calling</span>
+   <span class="s3">``</span><span class="s0">$client-</span><span class="s1">&gt;</span><span class="s0">enableProfiler</span><span class="s1">()</span><span class="s3">`` </span><span class="s0">when you need the profiler in a test </span><span class="s1">(</span><span class="s0">that</span>
+   <span class="s0">speeds up functional tests quite a bit</span><span class="s1">)</span><span class="s0">.</span>
+</pre>
+</body>
+</html>

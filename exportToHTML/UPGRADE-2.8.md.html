@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>UPGRADE-2.8.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+UPGRADE-2.8.md</font>
+</center></td></tr></table>
+<pre><span class="s0">UPGRADE FROM 2.7 to 2.8</span>
+<span class="s2">=======================</span>
+
+<span class="s0">When upgrading Symfony from 2.7 to 2.8, beware of the following changes in the</span>
+<span class="s0">Standard Edition</span><span class="s1">:</span>
+
+ <span class="s2">* </span><span class="s0">Assetic is not included by default anymore.</span>
+ <span class="s2">* </span><span class="s0">It comes with a new major version of </span><span class="s3">`</span><span class="s0">sensio/distribution-bundle</span><span class="s3">`</span><span class="s0">. If you are</span>
+   <span class="s0">updating the bundle in your project as well, the following changes are required</span><span class="s1">:</span>
+   <span class="s2">- </span><span class="s0">The web configurator got removed. So you need to remove the </span><span class="s3">`</span><span class="s1">_</span><span class="s0">configurator</span><span class="s3">`</span>
+     <span class="s0">routing entry from </span><span class="s3">`</span><span class="s0">app/config/routing_dev.yml</span><span class="s3">`</span><span class="s0">.</span>
+   <span class="s2">- </span><span class="s0">The generated </span><span class="s3">`</span><span class="s0">app/bootstrap.php.cache</span><span class="s3">` </span><span class="s0">does not include autoloading anymore.</span>
+     <span class="s0">So you need to add the autoloading code in your front controllers </span><span class="s3">`</span><span class="s0">web/app.php</span><span class="s3">`</span><span class="s0">,</span>
+     <span class="s3">`</span><span class="s0">web/app_dev.php</span><span class="s3">`</span><span class="s0">, </span><span class="s3">`</span><span class="s0">app/console</span><span class="s3">` </span><span class="s0">and </span><span class="s3">`</span><span class="s0">app/phpunit.xml.dist</span><span class="s3">` </span><span class="s1">(</span><span class="s0">bootstrap config</span><span class="s1">)</span><span class="s0">.</span>
+   <span class="s2">- </span><span class="s0">If you have been using the Symfony 3 directory structure already, you need to</span>
+     <span class="s0">overwrite the cache and log directories in your </span><span class="s3">`</span><span class="s0">AppKernel</span><span class="s3">` </span><span class="s0">as it is also done</span>
+     <span class="s0">in Symfony 3 now </span><span class="s1">(</span><span class="s0">see</span>
+     <span class="s1">[</span><span class="s3">`</span><span class="s0">app/AppKernel.php</span><span class="s3">`</span><span class="s1">](https://github.com/symfony/symfony-standard/blob/master/app/AppKernel.php#L31-L44))</span><span class="s0">.</span>
+ <span class="s2">* </span><span class="s0">The </span><span class="s3">`</span><span class="s0">app/AppKernel.php</span><span class="s3">` </span><span class="s0">and </span><span class="s3">`</span><span class="s0">app/AppCache.php</span><span class="s3">` </span><span class="s0">files are now autoloaded via Composer.</span>
+
+<span class="s0">You can have a look at the</span>
+<span class="s1">[</span><span class="s0">diff</span><span class="s1">](https://github.com/symfony/symfony-standard/compare/2.7...2.8)</span>
+<span class="s0">between the 2.7 version of the Standard Edition and the 2.8 version that</span>
+<span class="s0">should help you to apply the changes in your project.</span>
+
+<span class="s0">Additionally, we recommend to</span>
+<span class="s1">[</span><span class="s0">add phpunit-bridge to handle deprecations</span><span class="s1">](https://github.com/symfony/symfony-standard/pull/884)</span>
+<span class="s0">in your test suite and to ensure tests are</span>
+<span class="s1">[</span><span class="s0">run with full error reporting</span><span class="s1">](https://github.com/symfony/symfony-standard/pull/875)</span><span class="s0">.</span>
+</pre>
+</body>
+</html>
