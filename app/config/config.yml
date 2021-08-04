@@ -39,8 +39,8 @@ twig:
 doctrine:
     dbal:
         driver: pdo_pgsql
-        host: database
-        port: 1234
+        host: localhost
+        port: null
         dbname: symfony
         user: root
         password: secret
