@@ -41,9 +41,9 @@ doctrine:
         driver: pdo_pgsql
         host: localhost
         port: null
-        dbname: symfony
-        user: root
-        password: secret
+        dbname: news
+        user: postgres
+        password: 1234
         charset: UTF8
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
