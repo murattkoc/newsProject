@@ -1,0 +1,22 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <title>{% block title %}{% endblock %} User Register</title>
+    <body class="text-center">
+<main class="form-signin">
+
+    <img class="mb-4" src="{{ asset('/images/4.png') }}" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">User Register</h1>
+
+    {{ form_start(form, { 'action': path('fos_user_registration_register'), 'attr': { 'class': 'fos_user_registration_register ','validate':'novalidate'}}) }}
+    {{ form_widget(form) }}
+    <div>
+        <input type="submit"  class="btn btn-lg btn-success" value="{{ 'registration.submit'|trans }}" /><br><br>
+        <a href=""><input class="btn btn-lg btn-primary" value="Back to Login"></a>
+
+    </div>
+
+{{ form_end(form) }}
+{% endblock %}

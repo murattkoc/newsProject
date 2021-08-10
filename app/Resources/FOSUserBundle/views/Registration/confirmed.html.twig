@@ -1,0 +1,19 @@
+
+{% trans_default_domain 'FOSUserBundle' %}
+ {% extends "::base.html.twig" %}
+
+
+{% block body %}
+<body class="text-center">
+<main class="form-signin">
+<br><br>
+
+        <p class="p-5 bg-success text-white">{{ 'registration.confirmed'|trans({'%username%': user.username}) }}<br>
+            <a class="btn btn-dark text-primary" href="{{ path("fos_user_security_login") }}">Now Login</a></p>
+    {% if targetUrl %} </div>
+
+    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+
+    {% endif %}
+
+{% endblock body %}

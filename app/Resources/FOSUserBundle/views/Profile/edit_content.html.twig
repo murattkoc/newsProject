@@ -1,0 +1,19 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends "base.html.twig" %}
+
+{% block body %}
+<title>{% block title %}{% endblock %} Profile Edit</title>
+<body class="text-center">
+<main class="form-signin">
+    <img class="mb-4" src="{{ asset('/images/4.png') }}" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">User Profile Edit</h1>
+
+    <div class="form-control">
+{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+    {{ form_widget(form) }}
+    <div>
+        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+    </div>
+{{ form_end(form) }}
+
+{% endblock %}
