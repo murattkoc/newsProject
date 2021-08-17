@@ -35,7 +35,7 @@
             </div> {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_AUTHOR') %}
                     <div class="float-right">
 
-                    <button type="button" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i><br>Share a News</button>
+                    <a href="{{ path('news-share') }}" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i><br>Share a News</a>
 
             </div>
     {% else %}

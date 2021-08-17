@@ -1,6 +1,7 @@
 <?php
 
 namespace AppBundle\Form;
+use AppBundle\Entity\News;
 use AppBundle\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -10,23 +11,21 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-class CustomRegistrationType extends AbstractType
+
+class NewsShareType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username', TextType::class, ['constraints' => [new NotBlank()]])
-            ->add('firstName', TextType::class, ['constraints' => [new NotBlank()]])
-            ->add('lastName', TextType::class, ['constraints' => [new NotBlank()]])
-            ->add('password', PasswordType::class, ['constraints' => [new NotBlank()]])
-            ->add('email', TextType::class, ['constraints' => [new NotBlank()]])
-            ->add('prof_image', FileType::class,array('label' => 'Profile Image (optional)'));
+            ->add('title', TextType::class, ['constraints' => [new NotBlank()]])
+            ->add('subject', TextType::class, ['constraints' => [new NotBlank()]])
+            ->add('content', TextType::class, ['constraints' => [new NotBlank()]])
+            ->add('image', FileType::class,array('label' => 'News Image (optional)'));
     }
-
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => User::class
+            'data_class' => News::class
         ));
     }
-}
+   }

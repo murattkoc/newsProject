@@ -19,7 +19,7 @@ class EditType extends AbstractType
         $builder->add('username');
         $builder->add('first_name');
         $builder->add('last_name');
-        $builder-> add('prof_image', FileType::class, array('label' => 'prof_image (img file)','data_class' => null,'required' => false));
+        $builder-> add('prof_image', FileType::class, array('label' => 'profile image (img file)','data_class' => null,'required' => false));
 
     }
     public function configureOptions(OptionsResolver $resolver)

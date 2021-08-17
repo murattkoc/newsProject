@@ -1,9 +1,9 @@
 <?php
 
-namespace UserBundle\Controller;
+namespace AppBundle\Controller;
 use AppBundle\Entity\User;
 use AppBundle\Entity\News;
-use UsersBundle\Form\CustomRegistrationType;
+use AppBundle\Form\CustomRegistrationType;
 use AppBundle\Form\NewsShareType;
 use AppBundle\Manager\UserManager;
 use FOS\UserBundle\Event\FilterUserResponseEvent;

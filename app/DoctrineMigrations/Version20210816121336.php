@@ -30,7 +30,7 @@ class Version20210816121336 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
 
-        $this->addSql('CREATE SCHEMA public');
+
         $this->addSql('ALTER TABLE news_edit ALTER edit_request_apply_date SET NOT NULL');
         $this->addSql('ALTER TABLE news_edit ALTER edit_date SET NOT NULL');
     }
