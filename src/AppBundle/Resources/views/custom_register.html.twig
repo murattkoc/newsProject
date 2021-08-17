@@ -1,0 +1,22 @@
+{%  extends '::base.html.twig' %}
+{% block body %}
+    <body class="text-center">
+<main class="form-signin">
+    <img class="mb-4" src="{{ asset('/images/4.png') }}" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">User Register</h1>
+
+    {{ form_start(form, { 'attr': { 'novalidate': 'novalidate' } }) }}
+          {{ form_row(form.firstName) }}
+          {{ form_row(form.lastName) }}
+          {{ form_row(form.username) }}
+          {{ form_row(form.email) }}
+          {{ form_row(form.password) }}
+          {{ form_row(form.prof_image) }}
+    <br>
+          <button class="btn btn-lg btn-success" type="submit">Register</button>
+        {{ form_end(form) }}
+    <a href="{{ path('fos_user_security_login') }}" class="btn btn-lg btn-primary" value="Back to Login">Back to Login</a>
+
+    </div>
+
+{% endblock %}

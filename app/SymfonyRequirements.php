@@ -389,7 +389,7 @@ class SymfonyRequirements extends RequirementCollection
     {
         /* mandatory requirements follow */
 
-        $installedPhpVersion = PHP_VERSION;
+        $installedPhpVersion = phpversion();
         $requiredPhpVersion = $this->getPhpRequiredVersion();
 
         $this->addRecommendation(
@@ -439,15 +439,24 @@ class SymfonyRequirements extends RequirementCollection
             'Change the permissions of either "<strong>app/logs/</strong>" or  "<strong>var/logs/</strong>" directory so that the web server can write into it.'
         );
 
-        $this->addPhpIniRequirement(
-            'date.timezone', true, false,
-            'date.timezone setting must be set',
-            'Set the "<strong>date.timezone</strong>" setting in php.ini<a href="#phpini">*</a> (like Europe/Paris).'
-        );
+        if (version_compare($installedPhpVersion, '7.0.0', '<')) {
+            $this->addPhpIniRequirement(
+                'date.timezone', true, false,
+                'date.timezone setting must be set',
+                'Set the "<strong>date.timezone</strong>" setting in php.ini<a href="#phpini">*</a> (like Europe/Paris).'
+            );
+        }
 
         if (false !== $requiredPhpVersion && version_compare($installedPhpVersion, $requiredPhpVersion, '>=')) {
+            $timezones = array();
+            foreach (DateTimeZone::listAbbreviations() as $abbreviations) {
+                foreach ($abbreviations as $abbreviation) {
+                    $timezones[$abbreviation['timezone_id']] = true;
+                }
+            }
+
             $this->addRequirement(
-                in_array(@date_default_timezone_get(), DateTimeZone::listIdentifiers(), true),
+                isset($timezones[@date_default_timezone_get()]),
                 sprintf('Configured default timezone "%s" must be supported by your installation of PHP', @date_default_timezone_get()),
                 'Your default timezone is not supported by PHP. Check for typos in your <strong>php.ini</strong> file and have a look at the list of deprecated timezones at <a href="http://php.net/manual/en/timezones.others.php">http://php.net/manual/en/timezones.others.php</a>.'
             );
@@ -684,6 +693,21 @@ class SymfonyRequirements extends RequirementCollection
                 'Upgrade your <strong>intl</strong> extension with a newer ICU version (4+).'
             );
 
+            if (class_exists('Symfony\Component\Intl\Intl')) {
+                $this->addRecommendation(
+                    \Symfony\Component\Intl\Intl::getIcuDataVersion() <= \Symfony\Component\Intl\Intl::getIcuVersion(),
+                    sprintf('intl ICU version installed on your system is outdated (%s) and does not match the ICU data bundled with Symfony (%s)', \Symfony\Component\Intl\Intl::getIcuVersion(), \Symfony\Component\Intl\Intl::getIcuDataVersion()),
+                    'To get the latest internationalization data upgrade the ICU system package and the intl PHP extension.'
+                );
+                if (\Symfony\Component\Intl\Intl::getIcuDataVersion() <= \Symfony\Component\Intl\Intl::getIcuVersion()) {
+                    $this->addRecommendation(
+                        \Symfony\Component\Intl\Intl::getIcuDataVersion() === \Symfony\Component\Intl\Intl::getIcuVersion(),
+                        sprintf('intl ICU version installed on your system (%s) does not match the ICU data bundled with Symfony (%s)', \Symfony\Component\Intl\Intl::getIcuVersion(), \Symfony\Component\Intl\Intl::getIcuDataVersion()),
+                        'To avoid internationalization data inconsistencies upgrade the symfony/intl component.'
+                    );
+                }
+            }
+
             $this->addPhpIniRecommendation(
                 'intl.error_level',
                 create_function('$cfgValue', 'return (int) $cfgValue === 0;'),
@@ -713,7 +737,7 @@ class SymfonyRequirements extends RequirementCollection
             'Install and/or enable a <strong>PHP accelerator</strong> (highly recommended).'
         );
 
-        if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $this->addRecommendation(
                 $this->getRealpathCacheSize() >= 5 * 1024 * 1024,
                 'realpath_cache_size should be at least 5M in php.ini',

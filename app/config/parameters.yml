@@ -1,0 +1,15 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: null
+    database_name: news10
+
+    database_user: postgres
+    database_password: 1234
+    mailer_transport: smtp
+    mailer_host: smtp.gmail.com
+    mailer_encryption: tls
+    mailer_port: 587
+    mailer_user: muraatkooc@gmail.com
+    mailer_password: M1453571_58k
+    secret: ThisTokenIsNotSoSecretChangeIt

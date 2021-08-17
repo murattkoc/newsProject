@@ -8,8 +8,21 @@ security:
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
     providers:
+        in_memory:
+            memory:
+                users:
+                    ryan:
+                        password: 123
+                        roles: 'ROLE_USER'
+                    admin:
+                        password: 123
+                        roles: 'ROLE_ADMIN'
         fos_userbundle:
             id: fos_user.user_provider.username
+        db_provider:
+            entity:
+                class: AppBundle\Entity\Member
+                property: username
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -19,6 +32,7 @@ security:
 
         main:
             pattern: ^/
+            provider: db_provider
             user_checker: security.user_checker
             form_login:
                 provider: fos_userbundle
@@ -37,6 +51,7 @@ security:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/share, role: IS_AUTHENTICATED_FULLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
 
 

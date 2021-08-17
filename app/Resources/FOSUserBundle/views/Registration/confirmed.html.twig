@@ -4,16 +4,29 @@
 
 
 {% block body %}
+
+<title>{% block title %}{% endblock %} User Register</title>
 <body class="text-center">
 <main class="form-signin">
 <br><br>
 
-        <p class="p-5 bg-success text-white">{{ 'registration.confirmed'|trans({'%username%': user.username}) }}<br>
-            <a class="btn btn-dark text-primary" href="{{ path("fos_user_security_login") }}">Now Login</a></p>
-    {% if targetUrl %} </div>
+    <br><br>
+    <br><br>
 
-    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+    <label class="p-5 bg-success text-white"><br><br><br><br><br>
+        Hi {{ username }}
+        <br>
+        <p >{{ 'registration.flash.user_created'|trans({'%username%': username}) }}<br><br>
+            <br>
+            {{ 'registration.check_email'|trans({'%email%': email}) }}<br><br>
+            {{ 'registration.warning'|trans({'%email%': email}) }}<br><br>
+            <a class="btn btn-dark text-warning" href="{{ path("fos_user_profile_show") }}">Now Login</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-    {% endif %}
 
 {% endblock body %}

@@ -22,16 +22,24 @@
         </form>
             &nbsp;
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
                     <div class="float-right border p-2 pt-0" style="margin-right: 5%; text-align: center">
 
                     <p class="navbar-text">
-                        <a href="/profile" style="text-decoration:none" >
+                        <a href="{{ path("fos_user_profile_show") }}" style="text-decoration:none" >
                     {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} </a></p>|
                     <a class="btn btn-primary" href="{{ path('fos_user_security_logout') }}">
                         {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
                     <i class="fas fa-sign-out-alt"></i>
                     </a>
+            </div> {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_AUTHOR') %}
+                    <div class="float-right">
+
+                    <button type="button" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i><br>Share a News</button>
+
             </div>
+    {% else %}
+                {% endif %}
                 {% else %}
         <div class="float-right p-2 pt-0" style="margin-right: 5%; text-align: center">
 

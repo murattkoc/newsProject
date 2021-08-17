@@ -14,7 +14,7 @@
     {{ form_widget(form) }}
     <div>
         <input type="submit"  class="btn btn-lg btn-success" value="{{ 'registration.submit'|trans }}" /><br><br>
-        <a href=""><input class="btn btn-lg btn-primary" value="Back to Login"></a>
+        <a href="{{ path('fos_user_security_login') }}" class="btn btn-lg btn-primary" value="Back to Login">Back to Login</a>
 
     </div>
 

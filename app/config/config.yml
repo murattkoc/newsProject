@@ -7,7 +7,8 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
-    brochures_directory: '%kernel.root_dir%/../web/images'
+    brochures_directory: '%kernel.root_dir%/../app/Resources/web/images/userProfileImage'
+
 
 framework:
     #esi: ~
@@ -17,8 +18,11 @@ framework:
         resource: '%kernel.root_dir%/config/routing.yml'
         strict_requirements: ~
     form: ~
+
     csrf_protection: ~
-    validation: { enable_annotations: true }
+    validation:
+        enable_annotations: true
+        enabled: true
     #serializer: { enable_annotations: true }
     templating:
         engines: ['twig']
@@ -42,7 +46,7 @@ doctrine:
         driver: pdo_pgsql
         host: localhost
         port: null
-        dbname: news19
+        dbname: news10
         user: postgres
         password: 1234
         charset: UTF8
@@ -64,7 +68,12 @@ swiftmailer:
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'
-    spool: { type: memory }
+    port: '%mailer_port%'
+    encryption: '%mailer_encryption%'
+    spool:
+        type: file
+        path: '%kernel.root_dir%/spool'
+
 
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
