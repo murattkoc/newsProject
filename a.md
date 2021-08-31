@@ -1,2 +1,2 @@
-# DergiPark Temel Gereksinim Klavuzu
+# DergiPark Temel Gereksinim Kılavuzu
 ***
