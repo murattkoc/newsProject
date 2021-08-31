@@ -1,1 +1,2 @@
 # DergiPark Temel Gereksinim Klavuzu
+***
