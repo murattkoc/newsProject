@@ -8,6 +8,7 @@ tarafından hazırlanmıştır.
 
 ------
 
+
 # Dokümantasyon
 Bu doküman dergipark kurulumu ve gerekli konfigürasyonları yapmak amacıyla oluşturulmuştur.Bu kısımda kurulan programlara ve servislere ait olan kaynak dokümanlar yer almaktadır. 
 
