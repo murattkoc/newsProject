@@ -59,3 +59,6 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
 
 **Not:** PhpStorm üzerinden symfony projelerini kolay kullanabilmek için bazı pluginlerin yüklenmesi önerilmektedir. Bunlardan birkaçı; 
 
+* Symfony Plugin,
+* Twig Plugin,
+* PHP Annotations.
