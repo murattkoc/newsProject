@@ -50,7 +50,7 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
     Proje dosyalarını kullanabilmek için git kurulumu yapılmalıdır. Ardından home dizini içerisinde yeni bir klasör oluşturulmalıdır.
     Daha sonra  https://git.ytlabs.com/ reposuna kullanıcı kaydınız yapılmalıdır.(Bu kayıt DergiPark dosyalarını clone edebilmek için gereklidir.)
     Kayıt olunduktan ve proje dosyalarına eriştikten sonra proje url üzerinden clone edilmelidir. 
-    Daha sonra oluşturulan yeni klasöre geçip içerisinde proje dosyaları github kullanıcı adı ve         şifresiyle clone edilmelidir.  
+    Daha sonra oluşturulan yeni klasöre geçip içerisinde proje dosyaları github kullanıcı adı ve şifresiyle clone edilmelidir.  
 ### 8. PhpStorm IDE Kurulumu( İsteğe Bağlı)
     Tercihen istenilen ide üzerinde çalışılabilir. Bu sistem için PhpStorm önerilmektedir. 
     PhpStorm ide programını Ubuntu Software üzerinden yüklenebilir. 
