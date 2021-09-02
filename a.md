@@ -56,7 +56,7 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
     PhpStorm ide programını Ubuntu Software üzerinden yüklenebilir. 
     30 günlük deneme sürümü veya var ise lisans üzerinden kayıt olunmalıdır. 
     Kayıt olduktan sonra projeyi artık kullanabilirsiniz.
-
+  <br/>
 **Not:** PhpStorm üzerinden symfony projelerini kolay kullanabilmek için bazı pluginlerin yüklenmesi önerilmektedir. Bunlardan birkaçı; 
 
 * Symfony Plugin,
