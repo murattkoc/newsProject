@@ -81,3 +81,16 @@ Kullanıcıya tam ayrıcalık verilmelidir.
 Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** ile **ROLE_SUPER_ADMIN** ve **ROLE_ALLOWED_TO_SWITCH** yetkilerinin atanması gerekmektedir.
 
 **Not:** Şu ana kadar bir sorun olmadıysa ve veri tabanını sorunsuz olarak aktarıldıysa elasticsearch üzerinden verilerin indexlenmesi aşamasına geçebilirsiniz.
+
+## 11. ElasticSearch Veri Index Konfigürasyonu
+  Bu kısımda projenin alt dizininde olan **fos_index.sh** adlı bash dosyası çalıştırılarak veriler index sürecine aktarılmalıdır.
+
+| Servis & Program | Gerekli Versiyon  |
+|---|---|
+| Symfony  | 2.8.*  |
+|  PHP |  7.3 |
+| PHP - FPM  |  7.3 |
+|Postgresql|  9.5 |
+| Postgresql-contrib| 9.5|
+| Java|jdk-8 |
+|Elasticsearch| 2.4.*|
