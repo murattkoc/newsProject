@@ -74,3 +74,8 @@ Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
  Veri tabanı aktarımından önce postgresql üzerinden kullanıcı ve veritabanı oluşturulmalıdır. Burada dikkat edilecek nokta ise db ismi, kullanıcı adı ve şifrenin parameters.yml ile aynı olmasıdır.
 Dergipark **.sqlc** uzantılı database dosyası alındıktan sonra **pg_restore** komutuyla içeri aktarılmalıdır. Aktarım bittiğinde veritabanı izinleri oluşturulan kullanıcıya verilmelidir. Buradaki izinler tüm tablolara ve ayrıca SEQUENCES tablosuna verilmelidir.
 Kullanıcıya tam ayrıcalık verilmelidir.
+
+## 9. DergiPark Local Sistem Çalıştırma
+  Proje nginx server üzerinden çalıştırılarak hata kontrolü yapılmalıdır. Şayet hata yoksa DergiPark local ve dergipark.org üzerinden aynı bilgileri içeren bir kullanıcı oluşturulması gerekmektedir. 
+## 10. Fosuser Kullanıcı Yetkilendirme
+Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** ile **ROLE_SUPER_ADMIN** ve **ROLE_ALLOWED_TO_SWITCH** yetkilerinin atanması gerekmektedir.
