@@ -8,7 +8,6 @@ tarafından hazırlanmıştır.
 
 ------
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]
   <br/><br/>
 # Dokümantasyon
 Bu doküman dergipark kurulumu ve gerekli konfigürasyonları yapmak amacıyla oluşturulmuştur.Bu kısımda kurulan programlara ve servislere ait olan kaynak dokümanlar yer almaktadır. 
