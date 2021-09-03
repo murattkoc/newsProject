@@ -61,3 +61,5 @@ Parameters.yml içerisine aktarılan parametreler kullanıcıya uygun şekilde a
 Dosya İzinlerini Ayarlama veya Düzeltme yapılmalıdır. Bunun için Symfony web sayfasına bakınız.
  Ardından başta oluşturulan spool klasörüne -R 777 izni verilmelidir.
 Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
+
+### 8.1. Sistem Hosts Dosya Konfigürasyonu
