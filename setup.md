@@ -72,5 +72,5 @@ Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
 
 ### 8.3. Dergipark Database Restore
  Veri tabanı aktarımından önce postgresql üzerinden kullanıcı ve veritabanı oluşturulmalıdır. Burada dikkat edilecek nokta ise db ismi, kullanıcı adı ve şifrenin parameters.yml ile aynı olmasıdır.
-Dergipark **.sqlc** uzantılı database dosyası alındıktan sonra pg_restore komutuyla içeri aktarılmalıdır. Aktarım bittiğinde veritabanı izinleri oluşturulan kullanıcıya verilmelidir. Buradaki izinler tüm tablolara ve ayrıca SEQUENCES tablosuna verilmelidir.
+Dergipark **.sqlc** uzantılı database dosyası alındıktan sonra **pg_restore** komutuyla içeri aktarılmalıdır. Aktarım bittiğinde veritabanı izinleri oluşturulan kullanıcıya verilmelidir. Buradaki izinler tüm tablolara ve ayrıca SEQUENCES tablosuna verilmelidir.
 Kullanıcıya tam ayrıcalık verilmelidir.
