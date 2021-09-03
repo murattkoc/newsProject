@@ -7,7 +7,8 @@
 tarafından hazırlanmıştır. 
 
 ------
-**v1**
+**Version 1**
+
   <br/><br/>
 # Dokümantasyon
 Bu doküman dergipark kurulumu ve gerekli konfigürasyonları yapmak amacıyla oluşturulmuştur.Bu kısımda kurulan programlara ve servislere ait olan kaynak dokümanlar yer almaktadır. 
@@ -97,5 +98,6 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
  | Java|jdk-8 |
  |Elasticsearch| 2.4.*|
 
+<br><br>
 
-© Yonca Teknoloji Mühendislik ve Elektronik Hizmetleri Ltd Şti. - 2021 
+ © 2021 - Yonca Teknoloji Mühendislik ve Elektronik Hizmetleri Ltd Şti.
