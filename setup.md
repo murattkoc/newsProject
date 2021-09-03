@@ -47,8 +47,7 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
      JAVA_HOME path ayarlaması ve  PATH değişkenine JAVA bin dizin eklemesi Yapılmalıdır.
      İşlemler sonunda java versiyonu kontrol edilmelidir.
 ### 7. Git ve Proje Dosyalarına Erişim
-    Proje dosyalarını kullanabilmek için git kurulumu yapılmalıdır. Ardından home dizini içerisinde yeni bir klasör oluşturulmalıdır.
-    DergiPark dosyaları Ulakbim Stash platformunda master branch dizininde bulunmaktadır.
+Proje dosyalarını kullanabilmek için git kurulumu yapılmalıdır. Ardından home dizini içerisinde yeni bir klasör oluşturulmalıdır. DergiPark dosyaları Ulakbim Stash platformunda master branch dizininde bulunmaktadır.
 
   <br/>
   
