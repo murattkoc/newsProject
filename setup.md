@@ -87,13 +87,13 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
 ------
 ------
 <br/><br/>
-                    | Servis & Program | Gerekli Versiyon  |
-                    | :----: | :----: |
-                    | Symfony  | 2.8.*  |
-                    |  PHP |  7.3 |
-                    | PHP - FPM  |  7.3 |
-                    |Postgresql|  9.5 |
-                    | Postgresql-contrib| 9.5|
-                    | Java|jdk-8 |
-                    |Elasticsearch| 2.4.*|
+ | Servis & Program | Gerekli Versiyon  |
+ | :----------: | :---------: |
+ | Symfony  | 2.8.*  |
+ |  PHP |  7.3 |
+ | PHP - FPM  |  7.3 |
+ |Postgresql|  9.5 |
+ | Postgresql-contrib| 9.5|
+ | Java|jdk-8 |
+ |Elasticsearch| 2.4.*|
 
