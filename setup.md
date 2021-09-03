@@ -69,3 +69,8 @@ Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
      /etc/php/7.3/fpm/pool.d/www.conf dosyası açılarak içerisine local IP olan listen=127.0.0.1:9000 komutu dosyanın en sonuna eklenmelidir.
 
 **Not:** Nginx ve FPM socket üzerinden kullanıldığından buna göre konfigüre edilmiştir.
+
+### 8.3. Dergipark Database Restore
+ Veri tabanı aktarımından önce postgresql üzerinden kullanıcı ve veritabanı oluşturulmalıdır. Burada dikkat edilecek nokta ise db ismi, kullanıcı adı ve şifrenin parameters.yml ile aynı olmasıdır.
+Dergipark .sqlc uzantılı database dosyası alındıktan sonra pg_restore komutuyla içeri aktarılmalıdır. Aktarım bittiğinde veritabanı izinleri oluşturulan kullanıcıya verilmelidir. Buradaki izinler tüm tablolara ve ayrıca SEQUENCES tablosuna verilmelidir.
+Kullanıcıya tam ayrıcalık verilmelidir.
