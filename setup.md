@@ -52,3 +52,12 @@ Proje dosyalarını kullanabilmek için git kurulumu yapılmalıdır. Ardından 
   <br/>
   
 ## 8. DergiPark Konfigürasyon Aşaması
+Öncelikle proje dosyaları belirlenen uygun bir klasöre clone edilmelidir.
+
+Clone edilen projenin app klasörünün altında spool isimli klasör oluşturulmalıdır.
+app>config içerisinde parameters.yml isminde dosya oluşturulmalıdır.
+app>config>parameters.yml.dist dosyasındaki tüm alanlar parameters.yml içerisine kopyalanmalıdır.
+Parameters.yml içerisine aktarılan parametreler kullanıcıya uygun şekilde ayarlanmalıdır.
+Dosya İzinlerini Ayarlama veya Düzeltme yapılmalıdır. Bunun için symfony web sayfasına bakınız.
+ Ardından başta oluşturulan spool klasörüne -R 777 izni verilmelidir.
+Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
