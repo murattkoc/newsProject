@@ -101,4 +101,4 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
 
 <br><br>
 
- © 2021 - Yonca Teknoloji Mühendislik ve Elektronik Hizmetleri Ltd Şti.
+ © 2021 - Yonca Teknoloji Mühendislik ve Elektronik Hizmetleri Ltd. Şti.
