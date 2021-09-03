@@ -46,16 +46,10 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
      Java  openjdk-8-jdk yüklenmelidir.
      JAVA_HOME path ayarlaması ve  PATH değişkenine JAVA bin dizin eklemesi Yapılmalıdır.
      İşlemler sonunda java versiyonu kontrol edilmelidir.
-### 7. Git Kurulumu
+### 7. Git ve Proje Dosyalarına Erişim
     Proje dosyalarını kullanabilmek için git kurulumu yapılmalıdır. Ardından home dizini içerisinde yeni bir klasör oluşturulmalıdır.
-    Daha sonra  https://git.ytlabs.com/ reposuna kullanıcı kaydınız yapılmalıdır.(Bu kayıt DergiPark dosyalarını clone edebilmek için gereklidir.)
-    Kayıt olunduktan ve proje dosyalarına eriştikten sonra proje url üzerinden clone edilmelidir. 
-    Daha sonra oluşturulan yeni klasöre geçip içerisinde proje dosyaları github kullanıcı adı ve şifresiyle clone edilmelidir.  
+    DergiPark dosyaları Ulakbim Stash platformunda master branch dizininde bulunmaktadır.
 
   <br/>
   
-**Not:** PhpStorm üzerinden symfony projelerini kolay kullanabilmek için bazı pluginlerin yüklenmesi önerilmektedir. Bunlardan birkaçı; 
-
-* Symfony Plugin,
-* Twig Plugin,
-* PHP Annotations.
+## 8. DergiPark Konfigürasyon Aşaması
