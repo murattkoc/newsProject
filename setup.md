@@ -44,7 +44,7 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
     f. php-7.3-pgsql
 ### 5. Java Jdk-8 Kurulumu ve Konfigürasyonu
      Java  openjdk-8-jdk yüklenmelidir.
-     JAVA_HOME path ayarlaması ve  PATH değişkenine JAVA bin dizin eklemesi Yapılmalıdır.
+     JAVA_HOME path ayarlaması ve  PATH değişkenine JAVA bin dizin eklemesi yapılmalıdır.
      İşlemler sonunda java versiyonu kontrol edilmelidir.
 ### 6. Git ve Proje Dosyalarına Erişim
 Proje dosyalarını kullanabilmek için git kurulumu yapılmalıdır. Ardından home dizini içerisinde yeni bir klasör oluşturulmalıdır. DergiPark dosyaları Ulakbim Stash platformunda master branch dizininde bulunmaktadır.
