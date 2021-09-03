@@ -40,8 +40,8 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
     d. php7.3-xdebug
     e. php7.3-xml
     d. php7.3-curl
-    e. Php7.3-gd
-    f. Php-7.3-pgsql
+    e. php7.3-gd
+    f. php-7.3-pgsql
 ### 6. Java Jdk-8 Kurulumu ve Konfigürasyonu
      Java  openjdk-8-jdk yüklenmelidir.
      JAVA_HOME path ayarlaması ve  PATH değişkenine JAVA bin dizin eklemesi Yapılmalıdır.
@@ -58,6 +58,6 @@ Clone edilen projenin **app** klasörünün altında **spool** isimli klasör ol
 app>config içerisinde **parameters.yml** isminde dosya oluşturulmalıdır.
 **app>config>parameters.yml.dist** dosyasındaki tüm alanlar parameters.yml içerisine kopyalanmalıdır.
 Parameters.yml içerisine aktarılan parametreler kullanıcıya uygun şekilde ayarlanmalıdır.
-Dosya İzinlerini Ayarlama veya Düzeltme yapılmalıdır. Bunun için symfony web sayfasına bakınız.
+Dosya İzinlerini Ayarlama veya Düzeltme yapılmalıdır. Bunun için Symfony web sayfasına bakınız.
  Ardından başta oluşturulan spool klasörüne -R 777 izni verilmelidir.
 Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
