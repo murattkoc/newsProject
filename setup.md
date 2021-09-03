@@ -65,3 +65,5 @@ Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
 ### 8.1. Sistem Hosts Dosya Konfigürasyonu
      Öncelikle /etc/hosts dizinine gidilir.
      Burada localhost ip’sine denk gelen kısma sites-avaliable dosyasıyla aynı olan domain ismi girilmelidir. 
+### 8.2. PHP FPM Konfigürasyonu
+     /etc/php/7.3/fpm/pool.d/www.conf dosyası açılarak içerisine local ip olan listen=127.0.0.1:9000 alanı dosyanın en sonuna eklenmelidir.
