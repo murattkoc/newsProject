@@ -88,7 +88,9 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
 
 
 ------
+
 <br/><br/>
+
  | Servis & Program |  Versiyon  |
  | :----------: | :---------: |
  | symfony  | 2.8.*  |
@@ -114,6 +116,7 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
  | doctrine/doctrine-fixtures-bundle | 2.3.0 |
  | sensio/generator-bundle | 3.1.2 |
  | sensio/distribution-bundle | 5.0.18 |
+
 <br><br>
 
  © 2021 - Yonca Teknoloji Mühendislik ve Elektronik Hizmetleri Ltd. Şti.
