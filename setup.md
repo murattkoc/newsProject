@@ -83,7 +83,9 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
 **Not:** Şu ana kadar bir sorun olmadıysa ve veri tabanını sorunsuz olarak aktarıldıysa elasticsearch üzerinden verilerin indexlenmesi aşamasına geçebilirsiniz.
 
 ## 10. ElasticSearch Veri Index Konfigürasyonu
+
   Bu kısımda projenin alt dizininde olan **fos_index.sh** adlı bash dosyası çalıştırılarak veriler index sürecine aktarılmalıdır.
+
 ------
 ------
 <br/><br/>
