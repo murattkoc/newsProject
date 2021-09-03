@@ -63,5 +63,5 @@ Dosya İzinlerini Ayarlama veya Düzeltme yapılmalıdır. Bunun için Symfony w
 Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
 
 ### 8.1. Sistem Hosts Dosya Konfigürasyonu
-   Öncelikle /etc/hosts dizinine gidilir.
-   Burada localhost ip’sine denk gelen kısma sites-avaliable dosyasıyla aynı olan domain ismi girilmelidir. 
+     Öncelikle /etc/hosts dizinine gidilir.
+     Burada localhost ip’sine denk gelen kısma sites-avaliable dosyasıyla aynı olan domain ismi girilmelidir. 
