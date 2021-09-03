@@ -89,16 +89,31 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
 
 ------
 <br/><br/>
- | Servis & Program | Gerekli Versiyon  |
+ | Servis & Program |  Versiyon  |
  | :----------: | :---------: |
- | Symfony  | 2.8.*  |
- |  PHP |  7.3 |
+ | symfony  | 2.8.*  |
+ | PHP |  7.3 |
  | PHP - FPM  |  7.3 |
- |Postgresql|  9.5 |
- | Postgresql-contrib| 9.5|
- | Java|jdk-8 |
- |Elasticsearch| 2.4.*|
-
+ | postgresql |  9.5 |
+ | postgresql-contrib | 9.5 |
+ | java | jdk-8 |
+ | elasticsearch | 2.4.* |
+ | friendsofsymfony/elastica-bundle | 4.0.1 |
+ | twig/extensions | 1.4.1|
+ | symfony/swiftmailer-bundle| 2.4.2|
+ | symfony/assetic-bundle | 2.8.1 |
+ | symfony/monolog-bundle | 2.12.1 |
+ | doctrine/doctrine-migrations-bundle | ^1.3 |
+ | doctrine/migrations | ^1.5 | 
+ | doctrine/dbal | 2.5.10 |
+ | doctrine/doctrine-bundle | 1.6.7 | 
+ | doctrine/orm | 2.5.6|
+ | sentry/sentry-symfony | ^1.0 |
+ | guzzlehttp/guzzle | 6.2.2 |
+ | friendsofsymfony/user-bundle | 2.0.0 |
+ | doctrine/doctrine-fixtures-bundle | 2.3.0 |
+ | sensio/generator-bundle | 3.1.2 |
+ | sensio/distribution-bundle | 5.0.18 |
 <br><br>
 
  © 2021 - Yonca Teknoloji Mühendislik ve Elektronik Hizmetleri Ltd. Şti.
