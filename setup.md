@@ -67,3 +67,5 @@ Aynı şekilde web klasörüne de -R 777 izni verilmelidir.
      Burada localhost IP’sine denk gelen kısma sites-avaliable dosyasıyla aynı olan domain ismi girilmelidir. 
 ### 8.2. PHP FPM Konfigürasyonu
      /etc/php/7.3/fpm/pool.d/www.conf dosyası açılarak içerisine local IP olan listen=127.0.0.1:9000 komutu dosyanın en sonuna eklenmelidir.
+
+**Not:** Nginx ve FPM socket üzerinden kullanıldığından buna göre konfigüre edilmiştir.
