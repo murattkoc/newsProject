@@ -79,3 +79,5 @@ Kullanıcıya tam ayrıcalık verilmelidir.
   Proje nginx server üzerinden çalıştırılarak hata kontrolü yapılmalıdır. Şayet hata yoksa DergiPark local ve dergipark.org üzerinden aynı bilgileri içeren bir kullanıcı oluşturulması gerekmektedir. 
 ## 10. Fosuser Kullanıcı Yetkilendirme
 Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** ile **ROLE_SUPER_ADMIN** ve **ROLE_ALLOWED_TO_SWITCH** yetkilerinin atanması gerekmektedir.
+
+**Not:** Şu ana kadar bir sorun olmadıysa ve veri tabanını sorunsuz olarak aktarıldıysa elasticsearch üzerinden verilerin indexlenmesi aşamasına geçebilirsiniz.
