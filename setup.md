@@ -21,7 +21,7 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
 ### 1. PHP ve PHP-FPM Kurulumu
      PHP 7.3 ve PHP-FPM 7.3 versiyonu seçilmelidir.
 ### 2. Postgresql ve Postgresql-contrib Kurulumu
-    Postgresql 9.5 versiyonu seçilmelidir.
+    Postgresql-9.5 versiyonu seçilmelidir.
     Postgresql-contrib-9.5 versiyonu seçilmelidir.
 ### 3. ElasticSearch Kurulumu
      Elasticsearch 2.4.4 versiyonu seçilmelidir.
