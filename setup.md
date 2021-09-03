@@ -94,3 +94,6 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
 | Postgresql-contrib| 9.5|
 | Java|jdk-8 |
 |Elasticsearch| 2.4.*|
+
+
+(https://img.shields.io/github/release/pandao/editor.md.svg) ![
