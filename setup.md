@@ -86,7 +86,7 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
   Bu kısımda projenin alt dizininde olan **fos_index.sh** adlı bash dosyası çalıştırılarak veriler index sürecine aktarılmalıdır.
 
 | Servis & Program | Gerekli Versiyon  |
-|---|---|
+| :----: | :----: |
 | Symfony  | 2.8.*  |
 |  PHP |  7.3 |
 | PHP - FPM  |  7.3 |
