@@ -96,4 +96,4 @@ Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** il
 |Elasticsearch| 2.4.*|
 
 
-(https://img.shields.io/github/release/pandao/editor.md.svg) ![
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
