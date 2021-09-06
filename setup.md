@@ -12,7 +12,7 @@ tarafından hazırlanmıştır.
 # Dokümantasyon
 DergiPark sisteminin ayağa kaldırılması için gerekli ayarlar ve konfigürasyonlar dokümantasyon başlığı altından itibaren gösterilmektedir. Bu belge hazırlanırken kullanılan teknolojilerin kaynak sayfaları referans alınmıştır.
 
-**Not:** Bu doküman kapsamında kullanılan bileşenlerin tümünün sürümleri birbirleriyle uyumlu olmak zorundadır.
+**Not:** Bu doküman kapsamında kullanılan bileşenlerin sürümleri birbirleriyle uyumlu olmak zorundadır.
 
 ### Kurulum
 
