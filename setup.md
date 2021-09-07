@@ -41,7 +41,7 @@ DergiPark için Symfony 2.8.* sürümü gerekmektedir.
     e. php7.3-xml
     d. php7.3-curl
     e. php7.3-gd
-    f. php-7.3-pgsql
+    f. php7.3-pgsql
 ### 5. Java Jdk-8 Kurulumu ve Konfigürasyonu
      Java openjdk-8-jdk yüklenmelidir.
      JAVA_HOME path ayarı ve  PATH değişkenine JAVA bin dizin eklemesi yapılmalıdır.
