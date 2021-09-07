@@ -58,7 +58,7 @@ Clone edilen projenin **app** klasörünün altında **spool** isimli klasör ol
 app>config içerisinde **parameters.yml** isminde dosya oluşturulmalıdır.
 **app>config>parameters.yml.dist** dosyasındaki tüm alanlar parameters.yml içerisine kopyalanmalıdır.
 Parameters.yml içerisine aktarılan parametreler kullanıcıya uygun şekilde ayarlanmalıdır.
-Dosya İzinlerini ayarlama veya düzeltme işlemi yapılmalıdır. Bunun için Symfony web sayfasına bakınız.
+**Dosya İzinlerini ayarlama veya düzeltme** işlemi yapılmalıdır. Bunun için Symfony web sayfasına bakınız.
 Ardından başta oluşturulan **spool** klasörüne -R 777 izni verilmelidir.
 Aynı şekilde **web** klasörüne de -R 777 izni verilmelidir.
 
