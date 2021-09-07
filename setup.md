@@ -71,7 +71,7 @@ Aynı şekilde **web** klasörüne de -R 777 izni verilmelidir.
 **Not:** FPM socket üzerinden kullanıldığından buna göre konfigüre edilmiştir.
 
 ### 7.3. DergiPark Database Restore
-Veri tabanı aktarımından önce postgresql üzerinden kullanıcı ve veritabanı oluşturulmalıdır. Burada dikkat edilecek nokta ise db ismi, kullanıcı adı ve şifrenin parameters.yml ile aynı olmasıdır.
+Veritabanı aktarımından önce postgresql üzerinden kullanıcı ve veritabanı oluşturulmalıdır. Burada dikkat edilecek nokta ise db ismi, kullanıcı adı ve şifrenin parameters.yml ile aynı olmasıdır.
 DergiPark **.sqlc** uzantılı database dosya çıktısı alındıktan sonra **pg_restore** komutuyla içeri aktarılmalıdır. Aktarım bittiğinde veritabanı izinleri oluşturulan kullanıcıya verilmelidir. Buradaki izinler tüm tablolara ve ayrıca SEQUENCES tablosuna da verilmelidir.
 Kullanıcıya tam ayrıcalık verilmelidir.
 /etc/postgresql/9.5/main/ dizininde bulunan **pg_hba.conf** dosyası açılarak veritabanında yeni oluşturulan kullanıcı **Database administrative login by Unix domain socket** başlığı altına önceki tanımlanan kullanıcılar gibi tanımlanmalıdır. Tanımlama yapılırken yeni eklenen kullanıcının metodu **md5** olarak girilmelidir. 
@@ -81,7 +81,7 @@ Kullanıcıya tam ayrıcalık verilmelidir.
 ## 9. Fosuser Kullanıcı Yetkilendirme
 Bu kısımda sistem üzerinden oluşturulan kullanıcıya **fosuser promote** ile **ROLE_SUPER_ADMIN** ve **ROLE_ALLOWED_TO_SWITCH** yetkilerinin atanması gerekmektedir.
 
-**Not:** Şu ana kadar bir sorun olmadıysa ve veri tabanı sorunsuz olarak aktarıldıysa elasticsearch üzerinden verilerin indexlenmesi aşamasına geçebilirsiniz.
+**Not:** Şu ana kadar bir sorun olmadıysa ve veritabanı sorunsuz olarak aktarıldıysa elasticsearch üzerinden verilerin indexlenmesi aşamasına geçebilirsiniz.
 
 ## 10. ElasticSearch Veri Index Konfigürasyonu
 
