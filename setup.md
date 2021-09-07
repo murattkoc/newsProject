@@ -74,7 +74,7 @@ Aynı şekilde **web** klasörüne de -R 777 izni verilmelidir.
 Veri tabanı aktarımından önce postgresql üzerinden kullanıcı ve veritabanı oluşturulmalıdır. Burada dikkat edilecek nokta ise db ismi, kullanıcı adı ve şifrenin parameters.yml ile aynı olmasıdır.
 DergiPark **.sqlc** uzantılı database dosya çıktısı alındıktan sonra **pg_restore** komutuyla içeri aktarılmalıdır. Aktarım bittiğinde veritabanı izinleri oluşturulan kullanıcıya verilmelidir. Buradaki izinler tüm tablolara ve ayrıca SEQUENCES tablosuna da verilmelidir.
 Kullanıcıya tam ayrıcalık verilmelidir.
-        /etc/postgresql/9.5/main/ dizininde bulunan pg_hba.conf dosyası açılarak veritabanında yeni oluşturulan kullanıcı **Database administrative login by Unix domain socket** başlığı altına önceki tanımlanan kullanıcılar gibi tanımlanmalıdır. Tanımlama yapılırken yeni eklenen kullanıcının metodu **md5** olarak girilmelidir. 
+        /etc/postgresql/9.5/main/ dizininde bulunan **pg_hba.conf** dosyası açılarak veritabanında yeni oluşturulan kullanıcı **Database administrative login by Unix domain socket** başlığı altına önceki tanımlanan kullanıcılar gibi tanımlanmalıdır. Tanımlama yapılırken yeni eklenen kullanıcının metodu **md5** olarak girilmelidir. 
 
 ## 8. DergiPark Local Sistem Çalıştırma
   Proje çalıştırılarak hata kontrolü yapılmalıdır. Şayet hata yoksa DergiPark local ve dergipark.org.tr üzerinden aynı bilgileri içeren bir kullanıcı oluşturulması gerekmektedir. 
